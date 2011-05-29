@@ -12,6 +12,13 @@ elseif $TERM == 'xterm'
         set t_Co=8
         colorscheme strange
 endif
+set backup
+set backupdir=~/.vim/swap/bak
+set directory=~/.vim/swap/swp
+set undofile
+set undodir=~/.vim/swap/udo
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 set cmdheight=2
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ %r%{getcwd()}%h\ \ \ %l/%L:%c 

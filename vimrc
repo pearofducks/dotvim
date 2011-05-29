@@ -47,6 +47,7 @@ set incsearch
 set vb
 set magic
 set synmaxcol=2048
+"Tab mappings
 noremap <silent> ,vnt :NERDTreeToggle<CR>
 noremap <silent> ,tc :tabc<CR>
 noremap ,to :tabe<SPACE>
@@ -54,6 +55,8 @@ noremap <silent> ,f :tabn<CR>
 noremap <silent> ,d :tabp<CR>
 noremap <C-M> :tabn<CR>
 noremap <C-N> :tabp<CR>
+noremap <silent> ,vu :GundoToggle<CR>
+"Window mappings
 noremap <silent> ,ws :vsplit<CR>
 noremap <silent> ,wl :wincmd l<CR>
 noremap <silent> ,wh :wincmd h<CR>
@@ -69,5 +72,8 @@ nmap ; :
 nmap U :redo<CR>
 nmap J <PageDown>
 nmap K <PageUp>
+"Cursor Shape Change in terms
 let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"Gundo Options
+let g:gundo_width = 50

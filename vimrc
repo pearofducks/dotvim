@@ -17,12 +17,6 @@ set visualbell
 set noerrorbells
 set ttyfast
 set rnu
-set backupdir=~/.vim/swap/bak
-set directory=~/.vim/swap/swp
-set undofile
-set undodir=~/.vim/swap/udo
-set undolevels=1000 "maximum number of changes that can be undone
-set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 set cmdheight=2
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ %r%{getcwd()}%h\ \ \ %l/%L:%c
@@ -92,3 +86,9 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "Gundo Options
 let g:gundo_width = 50
+set backupdir=~/.vim/swap/bak
+set directory=~/.vim/swap/swp
+set undofile
+set undodir=~/.vim/swap/udo
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload

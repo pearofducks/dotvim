@@ -3,13 +3,10 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 if $TERM == 'xterm-256color' || has('gui_running')
-  set t_Co=256
   set background=dark
-  let g:solarized_termcolors=256
-  let g:solarized_termtrans=1
   colorscheme solarized
 elseif $TERM == 'xterm'
-  set t_Co=8
+"  set t_Co=8
   colorscheme strange
 endif
 set list
@@ -81,8 +78,9 @@ set winminwidth=20
 vmap <C-x> "ad
 vmap <C-c> "ay
 nmap <C-p> "aP
-nnoremap [ <<
-nnoremap ] >>
+nnoremap 0 >>
+nnoremap 9 <<
+call togglebg#map("<F2>")
 nnoremap <leader><space> :noh<CR>
 inoremap jj <Esc>
 nmap ; :

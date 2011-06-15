@@ -2,6 +2,8 @@ require 'fileutils'
 
 desc "Performs base installation"
 task :base do
+  system("git clone git://github.com/trammell/vim-conque.git bundle/conque")
+  system("git clone git://github.com/nathanaelkane/vim-indent-guides.git bundle/indent")
   system("git clone git://github.com/kchmck/vim-coffee-script.git bundle/coffeescript")
   system("git clone git://github.com/altercation/vim-colors-solarized.git bundle/solarized")
   system("git clone git://github.com/sjl/gundo.vim.git bundle/gundo")

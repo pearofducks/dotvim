@@ -9,6 +9,7 @@ elseif $TERM == 'xterm'
 "  set t_Co=8
   colorscheme strange
 endif
+set encoding=utf-8
 set list
 set listchars=tab:>-,extends:# ",trail:.,extends:#,nbsp:.
 set backup
@@ -58,6 +59,7 @@ nnoremap <silent> <leader>d :tabp<CR>
 nnoremap <C-M> :tabn<CR>
 nnoremap <C-N> :tabp<CR>
 nnoremap <silent> <leader>vu :GundoToggle<CR>
+nnoremap <silent> <leader>j :join<CR>
 "Window mappings
 nnoremap <silent> <leader>ws :vsplit<CR>
 nnoremap <silent> <leader>wl :wincmd l<CR>
@@ -76,7 +78,7 @@ nnoremap 0 >>
 nnoremap 9 <<
 call togglebg#map("<F2>")
 nnoremap <leader><space> :noh<CR>
-inoremap jj <Esc>
+inoremap kj <Esc>
 nmap ; :
 nmap U :redo<CR>
 nmap J <PageDown>

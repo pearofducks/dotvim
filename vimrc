@@ -76,8 +76,8 @@ set winminwidth=20
 vmap <C-x> "ad
 vmap <C-c> "ay
 nmap <C-p> "aP
-nnoremap 0 >>
-nnoremap 9 <<
+nnoremap > >>
+nnoremap < <<
 call togglebg#map("<F2>")
 nnoremap <leader><space> :noh<CR>
 inoremap kj <Esc>

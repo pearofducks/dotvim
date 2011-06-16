@@ -53,7 +53,7 @@ set magic
 set synmaxcol=2048
 "Tab mappings
 nnoremap <silent> <leader>vnt :NERDTreeToggle<CR>
-nnoremap <silent> <leader>vct :ConqueTerm bash<CR>
+nnoremap <silent> <leader>vtm :ConqueTerm bash<CR>
 nnoremap <silent> <leader>tc :tabc<CR>
 nnoremap <leader>to :tabe<SPACE>
 nnoremap <silent> <leader>f :tabn<CR>

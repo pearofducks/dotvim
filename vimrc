@@ -3,6 +3,7 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 if $TERM == 'xterm-256color' || has('gui_running')
+  let &t_Co=256
   set background=dark
   colorscheme solarized
 elseif $TERM == 'xterm'
@@ -52,6 +53,7 @@ set magic
 set synmaxcol=2048
 "Tab mappings
 nnoremap <silent> <leader>vnt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>vct :ConqueTerm bash<CR>
 nnoremap <silent> <leader>tc :tabc<CR>
 nnoremap <leader>to :tabe<SPACE>
 nnoremap <silent> <leader>f :tabn<CR>

@@ -3,11 +3,11 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 if $TERM == 'xterm-256color' || has('gui_running')
-  let &t_Co=256
+  let t_Co=256
   set background=dark
   colorscheme solarized
 elseif $TERM == 'xterm'
-"  set t_Co=8
+  let t_Co=8
   colorscheme strange
 endif
 set encoding=utf-8
@@ -80,14 +80,15 @@ nnoremap > >>
 nnoremap < <<
 call togglebg#map("<F2>")
 nnoremap <leader><space> :noh<CR>
-inoremap kj <Esc>
 nmap ; :
 nmap U :redo<CR>
 nmap J <PageDown>
 nmap K <PageUp>
+
 "Cursor Shape Change in terms
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 "Gundo Options
 let g:gundo_width = 50
 set backupdir=~/.vim/swap/bak
@@ -96,3 +97,20 @@ set undofile
 set undodir=~/.vim/swap/udo
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+"Arpeggio is friggin amazing
+call arpeggio#load()
+Arpeggioinoremap jk <ESC>
+Arpeggionnoremap qn :q!<CR>
+Arpeggionnoremap qy :wq<CR>
+Arpeggionnoremap jl :join<CR>
+Arpeggionnoremap wl :wincmd l<CR>
+Arpeggionnoremap wh :wincmd h<CR>
+Arpeggionnoremap wj :wincmd j<CR>
+Arpeggionnoremap wk :wincmd k<CR>
+Arpeggionnoremap wo :only<CR>
+Arpeggionnoremap wp :vert res +20<CR>
+Arpeggionnoremap wm :vert res -20<CR>
+
+"Legacy bindings, in case arpeggio goes bonkers
+"inoremap kj <Esc>

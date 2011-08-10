@@ -114,3 +114,17 @@ Arpeggionnoremap wm :vert res -20<CR>
 
 "Legacy bindings, in case arpeggio goes bonkers
 "inoremap kj <Esc>
+set viminfo='10,\"100,:20,%,n~/.viminfo
+if has("autocmd")
+  function! ResCur()
+    if line("'\"") <= line("$")
+      normal! g`"
+      return 1
+    endif
+  endfunction
+
+  augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+  augroup END
+endif

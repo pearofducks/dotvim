@@ -2,8 +2,9 @@ require 'fileutils'
 
 desc "Performs base installation"
 task :base do
+  system("git clone git://github.com/vimoutliner/vimoutliner.git bundle/outliner")
+  system("git clone git://github.com/kien/ctrlp.vim.git bundle/ctrlp")
   system("git clone git://github.com/kana/vim-arpeggio.git bundle/arpeggio")
-  system("git clone git://github.com/trammell/vim-conque.git bundle/conque")
   system("git clone git://github.com/nathanaelkane/vim-indent-guides.git bundle/indent")
   system("git clone git://github.com/kchmck/vim-coffee-script.git bundle/coffeescript")
   system("git clone git://github.com/altercation/vim-colors-solarized.git bundle/solarized")
@@ -15,6 +16,7 @@ task :base do
   system("git clone git://github.com/tpope/vim-surround.git bundle/surround")
   system("git clone git://github.com/tpope/vim-repeat.git bundle/repeat")
   system("git clone git://github.com/tpope/vim-haml.git bundle/haml")
+  system("git clone git://github.com/hail2u/vim-css3-syntax.git bundle/css3syntax")
   system("git clone git://github.com/vim-ruby/vim-ruby.git bundle/ruby")
   system("git clone git://github.com/ervandew/supertab.git bundle/supertab")
   system("git clone git://github.com/tpope/vim-endwise.git bundle/endwise")

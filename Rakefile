@@ -2,6 +2,8 @@ require 'fileutils'
 
 desc "Performs base installation"
 task :base do
+  system("git clone git://github.com/tpope/vim-rails.git bundle/rails")
+  system("git clone git://github.com/tpope/vim-bundler.git bundle/bundler")
   system("git clone git://github.com/vimoutliner/vimoutliner.git bundle/outliner")
   system("git clone git://github.com/kien/ctrlp.vim.git bundle/ctrlp")
   system("git clone git://github.com/kana/vim-arpeggio.git bundle/arpeggio")

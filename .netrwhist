@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/pear/.ssh'
+let g:netrw_dirhist_2='/Users/pear/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/things-rb-0.4.0/bin/lib/things'

@@ -107,7 +107,7 @@ Arpeggionnoremap wm :vert res -20<CR>
 Arpeggionnoremap vb <C-v>
 Arpeggionnoremap ef :CtrlP<CR>
 Arpeggionnoremap er :CtrlPMRUFiles<CR>
-Arpeggionnoremap eg :CtrlPBuffer<CR>
+Arpeggionnoremap eo :CtrlPBuffer<CR>
 Arpeggionnoremap nt :NERDTreeToggle<CR>
 
 "Legacy bindings, in case arpeggio goes bonkers
@@ -129,14 +129,18 @@ endif
 
 let g:ctrlp_persistent_input = 0
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_history = 0
+let g:ctrlp_cache_dir='/Users/pear/.vim'
 let g:ctrlp_prompt_mappings = {
+    \ 'PrtClearCache()':            ['R'],
     \ 'PrtSelectMove("j")':         ['J'],
     \ 'PrtSelectMove("k")':         ['K'],
     \ 'AcceptSelection("h")':       ['H'],
     \ 'AcceptSelection("t")':       ['T'],
     \ 'AcceptSelection("v")':       ['V'],
     \ 'ToggleFocus()':              ['<tab>'],
-    \ 'ToggleRegex()':              ['<c-r>'],
-    \ 'ToggleByFname()':            ['<c-d>'],
+    \ 'ToggleByFname()':            ['<c-f>'],
+    \ 'CreateNewFile()':            ['<c-n>'],
+    \ 'PrtExit()':                  ['<esc>', '<c-c>', 'Q'],
     \ }
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"

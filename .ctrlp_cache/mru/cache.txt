@@ -1,3 +1,4 @@
+/Users/pear/.vim/.gitignore
 /Users/pear/Development/railsTuts/sample_app/config/environments/development.rb
 /Users/pear/.bashrc
 /Users/pear/.ssh/config

@@ -127,6 +127,8 @@ if has("autocmd")
   augroup END
 endif
 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor/*
+
 let g:ctrlp_persistent_input = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_history = 0
